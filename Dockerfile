@@ -6,8 +6,8 @@ RUN apt-get update && \
     add-apt-repository -y ppa:gluster/glusterfs-3.5 && \
     apt-get update && \
     apt-get install -y glusterfs-client=3.5.9-ubuntu1~trusty1 && \
-    apt-get remove --purge software-properties-common && \
-    apt-get autoremove && \
+    apt-get remove --purge -y software-properties-common && \
+    apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
